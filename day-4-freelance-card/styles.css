@@ -1,0 +1,136 @@
+body{
+    background-color: #f4f1ec;
+    color: #181523;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.2;
+    font-size: 0.925rem;
+}
+
+.card{
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 20rem;
+    margin: 10rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    box-shadow: 0 2px 5px rgb(255, 255, 0, 0.01);
+    transition: box-shadow 0.3s, transform 0.3s ease;
+}
+
+.card:hover{
+    box-shadow: 0 2px 20px rgb(0, 0, 0, 0.1);
+    transform: translateY(-1rem);
+}
+
+.avatar{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    background: linear-gradient(135deg, #6d5bff, #ff5a36);
+    color: white;
+    font-size: 1em;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+}
+
+h1{
+    font-size: 1em;
+    margin: 0;
+}
+
+p{
+    margin: 0;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.2rem;
+}
+
+.description{
+    color: #5b5770;
+    font-size: 1em;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0%;
+}
+
+li{
+    margin: 0;
+    list-style-type: none;
+    list-style-position: outside;
+    background-color: #f4f1ec;
+    color: #3a1200;
+    font-weight: 700;
+    font-size: 0.8em;
+    border-radius: 999px;
+    padding: 0.5em 1em;
+    transition: transform 0.3s ease;
+}
+
+li:hover{
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+.dot{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 100%;
+    background-color: green;
+}
+
+.avaibility{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+.button{
+    color: #ff5a36;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.button:focus-visible{
+    outline: 2px solid #ff5a36;
+}
+
+.button::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #ff5a36;
+    position: absolute;
+    bottom: 0%;
+    left: -110%;
+    transition: left 0.3s ease;
+}
+
+.button:hover::after{
+    left: 0%;
+}

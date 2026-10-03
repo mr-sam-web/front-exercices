@@ -1,7 +1,7 @@
 body{
     background-color: #f4f1ec;
     color: #181523;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
     line-height: 1;
 }
 
@@ -20,6 +20,10 @@ body{
     box-shadow: 0 0 20px 5px #ff5a363a;
 }
 
+.card:hover .avatar{
+    transform: scale(1.1)
+}
+
 .avatar{
     background: linear-gradient(135deg, #6d5bff, #ff5a36);
     width: 3rem;
@@ -32,7 +36,8 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
 }
 
 .citation-wrapper{
@@ -53,19 +58,25 @@ body{
     gap: 0.25rem;
 }
 
-cite{
+p span{
     font-style: normal;
     font-size: small;
-    color: gray
+    color: rgb(59, 58, 58);
 }
 
 .badge{
     background-color: #f4f1ec;
     padding: 0 1rem;
     border-radius: 99px;
-    font-size: 0.75rem;
+    font-size: 0.75em;
     color: #3a1200;
     font-weight: bold;
+    display: flex;
+    gap: 0.3em;
+}
+
+.badge svg{
+    width: 1rem;
 }
 
 .btn{
@@ -75,6 +86,11 @@ cite{
     position: relative;
     display: inline-block;
     overflow: hidden;
+}
+
+.btn:focus-visible{
+    color: #181523;
+    outline: 2px double #ff4f00;
 }
 
 .btn-line{
