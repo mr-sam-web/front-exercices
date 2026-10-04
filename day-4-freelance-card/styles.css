@@ -4,6 +4,7 @@ body{
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.2;
     font-size: 0.925rem;
+    box-sizing: border-box;
 }
 
 .card{
@@ -41,8 +42,6 @@ body{
 .header{
     display: flex;
     flex-direction: row;
-    justify-content: start;
-    align-items: center;
     gap: 1rem;
 }
 
@@ -71,7 +70,8 @@ ul{
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    padding: 0%;
+    padding: 0;
+    margin: 0;
 }
 
 li{
@@ -81,7 +81,7 @@ li{
     background-color: #f4f1ec;
     color: #3a1200;
     font-weight: 700;
-    font-size: 0.8em;
+    font-size: 0.9em; /* 0.9em × 14.8px = 13.32px */
     border-radius: 999px;
     padding: 0.5em 1em;
     transition: transform 0.3s ease;
@@ -89,7 +89,6 @@ li{
 
 li:hover{
     transform: translateY(-2px);
-    cursor: pointer;
 }
 
 .dot{
@@ -108,9 +107,9 @@ li:hover{
 }
 
 .button{
-    color: #ff5a36;
+    color: #3a1200;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 1em; /* 14.8px */
     text-decoration: none;
     position: relative;
     overflow: hidden;
@@ -124,13 +123,13 @@ li:hover{
     content: "";
     width: 100%;
     height: 2px;
-    background-color: #ff5a36;
+    background-color: #3a1200;
     position: absolute;
     bottom: 0%;
     left: -110%;
-    transition: left 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
-.button:hover::after{
-    left: 0%;
+.button:hover::after, .button:focus-visible::after{
+    transform: translateX(110%);
 }
