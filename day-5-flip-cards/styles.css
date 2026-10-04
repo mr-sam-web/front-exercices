@@ -1,0 +1,147 @@
+body{
+    background-color: #f4f1ec;
+    color: #181523;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+    box-sizing: border-box;
+    line-height: 1.4;
+}
+
+section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.card-wrapper{
+    position: relative;
+}
+
+.card-wrapper:hover .verso{
+    transform: rotateY(0deg);
+    opacity: 100%;
+}
+
+.card-wrapper:focus-within .verso{
+    transform: rotateY(0deg);
+    opacity: 100%;
+}
+
+.card-wrapper:hover .recto{
+    transform: rotateY(180deg);
+    opacity: 0%;
+}
+
+.card-wrapper:focus-within .recto{
+    transform: rotateY(180deg);
+    opacity: 0%;
+}
+
+.card{
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1.375rem;
+    width: 12rem;
+    height: 15rem;
+    overflow: hidden;
+}
+
+.recto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s, opacity 0.3s ease;
+}
+
+.verso{
+    background-color: rgb(37, 34, 37);
+    color: white;
+    font-size: 0.875rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 0%;
+    transform: rotateY(-180deg);
+    transition: transform 0.3s, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.avatar{
+    border-radius: 100%;
+    background: linear-gradient(135deg, #6d5bff, #ff5a36);
+    width:3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.card-title{
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #3a1200;
+}
+
+.btn{
+    color: #ff5a36;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+p{
+    margin: 0;
+}
+
+
+.card-header{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.subtitle{
+    color: rgb(208, 203, 213);
+    font-weight: bold;
+}
+
+.bar-wrapper{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.bar{
+    width: 2rem;
+    height: 0.5rem;
+    background-color: grey;
+    border-radius: 999px;
+}
+
+.full{
+    background-color: #ff5a36;
+}
+
+.color-grey{
+    color: #5b5770;
+}
+
+a{
+    text-decoration: none;
+    color: #ff5a36;
+}
