@@ -11,7 +11,7 @@ body{
 .card{
     background-color: #ffffff;
     padding: 2rem;
-    border-radius: 1rem;
+    border-radius: 1.375rem;
     max-width: 20rem;
     margin: 10rem auto;
     display: flex;
